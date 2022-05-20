@@ -15,6 +15,9 @@ class Animal:
     def drink(self):
         print(f'{self.name} drinks water every few hours')
 
+    def print_info(self):
+        print(f'Animal name is {self.name}')
+
 
 class Cat(Animal):
     """Cat has 1 unique method (print how many years it lives)"""
@@ -92,3 +95,39 @@ print(issubclass(Bear, Animal))
 
 # Task #1a
 
+
+class Human:
+    def __init__(self, name, surname, age, weight, height):
+        self.name = name
+        self.surname = surname
+        self.age = age
+        self.weight = weight
+        self.height = height
+
+    def print_info(self):
+        print(f'Name: {self.name}\n'
+              f'Surname: {self.surname}\n'
+              f'Age: {self.age}\n'
+              f'Weight: {self.weight}\n'
+              f'Height: {self.height}')
+
+
+class Centaur(Human, Animal):
+    def __init__(self, name, surname, age, weight, height, color_tail):
+        Human.__init__(self, name, surname, age, weight, height)
+        Animal.__init__(self, name)
+        self.color_tail = color_tail
+
+    def info_about_centaur(self):
+        print(f'Name_centaur: {self.name}\n'
+              f'Age_centaur: {self.age}\n'
+              f'Weight_centaur: {self.weight}\n'
+              f'Height_centaur: {self.height}\n'
+              f'Color his tail: {self.color_tail.lower()}')
+
+
+obj = Centaur('Petro', 'Crypto', age=3001, weight=250, height=195, color_tail='Orange')
+print('-' * 75)
+obj.print_info()
+print('-' * 75)
+obj.info_about_centaur()
