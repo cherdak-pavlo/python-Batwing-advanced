@@ -1,8 +1,7 @@
 class StrMixin:
-    def print_name(self, obj):
-        for attribute in sorted(dir(obj)):
-            if attribute[0] != '_' and attribute != 'print_name':
-                print(f'{attribute} : {getattr(obj, attribute)}')
+    def print_name(self):
+        for key in self.__dict__:
+            print(f'{key}: {self.__dict__[key]}')
 
 
 class Profile(StrMixin):
@@ -20,7 +19,7 @@ class Profile(StrMixin):
 person = Profile("Alex", "Veritas", "+380666669999", "Lviv, kolomyiska 66/99", "alexveritas@gmail.com", "13.12.2001",
                  "20", "man")
 
-person.print_name(person)
+person.print_name()
 
 # OUTPUT
 
