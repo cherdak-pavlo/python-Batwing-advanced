@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3f4215cf-8c99-4962-9b36-8839ea1f8129" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework _2/task_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/homework _2/task_3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +154,8 @@
       <workItem from="1653121402776" duration="6179000" />
       <workItem from="1653164550425" duration="4029000" />
       <workItem from="1653243837085" duration="1067000" />
-      <workItem from="1653292837354" duration="5178000" />
+      <workItem from="1653292837354" duration="5789000" />
+      <workItem from="1653389779094" duration="233000" />
     </task>
     <servers />
   </component>
@@ -173,7 +175,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/python_Batwing_advanced$task_1.coverage" NAME="task_1 Coverage Results" MODIFIED="1653121776235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework _2" />
-    <SUITE FILE_PATH="coverage/python_Batwing_advanced$task_3.coverage" NAME="task_3 Coverage Results" MODIFIED="1653296035642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework _2" />
+    <SUITE FILE_PATH="coverage/python_Batwing_advanced$task_3.coverage" NAME="task_3 Coverage Results" MODIFIED="1653389964368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework _2" />
     <SUITE FILE_PATH="coverage/python_Batwing_advanced$task_4.coverage" NAME="task_4 Coverage Results" MODIFIED="1653295594579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework _2" />
     <SUITE FILE_PATH="coverage/python_Batwing_advanced$task_2.coverage" NAME="task_2 Coverage Results" MODIFIED="1653167750358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/homework _2" />
   </component>

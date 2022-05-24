@@ -1,6 +1,8 @@
 class StrMixin:
-    def info_person(self):
-        pass
+    def print_name(self, obj):
+        for attribute in sorted(dir(obj)):
+            if attribute[0] != '_' and attribute != 'print_name':
+                print(f'{attribute} : {getattr(obj, attribute)}')
 
 
 class Profile(StrMixin):
@@ -18,4 +20,15 @@ class Profile(StrMixin):
 person = Profile("Alex", "Veritas", "+380666669999", "Lviv, kolomyiska 66/99", "alexveritas@gmail.com", "13.12.2001",
                  "20", "man")
 
-person.info_person()
+person.print_name(person)
+
+# OUTPUT
+
+# address : Lviv, kolomyiska 66/99
+# age : 20
+# birthday : 13.12.2001
+# email : alexveritas@gmail.com
+# last_name : Veritas
+# name : Alex
+# phone_number : +380666669999
+# sex : man
