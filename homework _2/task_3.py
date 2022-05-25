@@ -1,7 +1,9 @@
 class StrMixin:
     def print_name(self):
-        for k, v in self.__dict__.items():
-            print(f'{k}: {v}')
+        my_list = []
+        for value in self.__dict__.values():
+            my_list.append(value)
+        print(my_list)
 
 
 class Profile(StrMixin):
