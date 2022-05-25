@@ -74,23 +74,23 @@ class Bear(Animal):
 
 cat_mike = Cat('Mike', age=4)
 cat_mike.how_many_years()
-print(issubclass(Cat, Animal))
+print(isinstance(cat_mike, Animal))
 
 bird_lorry = Bird('Lorry', color='Red')
 bird_lorry.animal_color()
-print(issubclass(Bird, Animal))
+print(isinstance(bird_lorry, Animal))
 
 horse_lucky = Horse('Lucky')
 horse_lucky.language_horse()
-print(issubclass(Horse, Animal))
+print(isinstance(horse_lucky, Animal))
 
 mole_gera = Mole('Gera')
 mole_gera.sleep_underground()
-print(issubclass(Mole, Animal))
+print(isinstance(mole_gera, Animal))
 
 bear_ivan = Bear('Ivan', favorite_food='Fish')
 bear_ivan.like_eat()
-print(issubclass(Bear, Animal))
+print(isinstance(bear_ivan, Animal))
 
 
 # Task #1a

@@ -1,7 +1,7 @@
 class StrMixin:
     def print_name(self):
-        for key in self.__dict__:
-            print(f'{key}: {self.__dict__[key]}')
+        for k, v in self.__dict__.items():
+            print(f'{k}: {v}')
 
 
 class Profile(StrMixin):
@@ -23,11 +23,11 @@ person.print_name()
 
 # OUTPUT
 
-# address : Lviv, kolomyiska 66/99
-# age : 20
-# birthday : 13.12.2001
-# email : alexveritas@gmail.com
-# last_name : Veritas
-# name : Alex
-# phone_number : +380666669999
-# sex : man
+# name: Alex
+# last_name: Veritas
+# phone_number: +380666669999
+# address: Lviv, kolomyiska 66/99
+# email: alexveritas@gmail.com
+# birthday: 13.12.2001
+# age: 20
+# sex: man
