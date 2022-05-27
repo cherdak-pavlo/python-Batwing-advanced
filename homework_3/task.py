@@ -80,8 +80,10 @@ class Human(Person):
         super().__init__(name, age, availability_of_money, having_own_home)
 
     def make_money(self):
-        self.balance += 5000
-        print(f"{self.name}'s balance now: {self.balance}")
+        money = random.randrange(1000, 5000, 300)
+        self.balance += money
+        print(f"+ You made {money}$\n"
+              f"{self.name}'s balance now: {self.balance}")
 
     def buy_house(self, number_of_house):
         if '[SOLD OUT]' in number_of_house.house_name:
@@ -105,6 +107,8 @@ john = Human('John', 21, True, False)
 leo = Human('Leo', 29, True, False)
 mike = Realtor(john, [home_13, home_89], discount=12)
 
+john.make_money()
+john.make_money()
 mike.provide_info_houses()
 mike.steal_money()
 mike.give_discount()
