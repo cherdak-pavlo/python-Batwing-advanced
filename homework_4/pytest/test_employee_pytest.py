@@ -20,8 +20,6 @@ def test_apply_raise():
     assert TestEmployee.pay != 320
 
 
-# IN PROGRESS -----------------------------------------------------------
-# def test_monthly_schedule(requests_mock):
-#     requests_mock.get(f"http://company.com/{TestEmployee.last}")
-#     assert TestEmployee.monthly_schedule()
-#     assert TestEmployee.monthly_schedule().status_code == 200
+def test_monthly_schedule(requests_mock):
+    requests_mock.get(f"http://company.com/{TestEmployee.last}/january", text='data')
+    assert TestEmployee.monthly_schedule('january') == 'data'
