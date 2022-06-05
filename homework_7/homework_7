@@ -1,0 +1,53 @@
+#1
+mysql -u killcrop123 -p school66 < school66.sql
+
+#2
+CREATE TABLE level (id INT PRIMARY KEY AUTO_INCREMENT, level_number INT NOT NULL);
+INSERT INTO level (level_number) VALUES (10), (11);
++----+--------------+
+| id | level_number |
++----+--------------+
+|  1 |           10 |
+|  2 |           11 |
++----+--------------+
+
+CREATE TABLE level_students (id INT PRIMARY KEY AUTO_INCREMENT, student_id INT, level_id INT);
+INSERT INTO level_students (student_id, level_id) VALUES (1, 2), (2, 1), (3, 1), (4, 2);
++----+------------+----------+
+| id | student_id | level_id |
++----+------------+----------+
+|  1 |          1 |        2 |
+|  2 |          2 |        1 |
+|  3 |          3 |        1 |
+|  4 |          4 |        2 |
++----+------------+----------+
+
+SELECT s.first_name, s.last_name, level.level_number FROM level_students ls INNER JOIN students s ON ls.student_id = s.id INNER JOIN level ON ls.level_id = level.id;
++------------+-----------+--------------+
+| first_name | last_name | level_number |
++------------+-----------+--------------+
+| Ivan       | Pidhaynuy |           11 |
+| Petro      | Pravdoryb |           10 |
+| Yuriy      | Skobylko  |           10 |
+| Liubomyr   | Luzhnyi   |           11 |
++------------+-----------+--------------+
+
+
+#3
+SELECT s.first_name, s.last_name, lessons.name AS lesson_name, level.level_number, t.name AS teacher_name FROM students s INNER JOIN student_lessons sl ON sl.student_id = s.id INNER JOIN lessons ON sl.lesson_id = lessons.id INNER JOIN level_students ls ON ls.student_id = s.id INNER JOIN level ON ls.level_id = level.id RIGHT JOIN teachers t ON t.lesson_id = lessons.id;
++------------+-----------+-------------+--------------+----------------------+
+| first_name | last_name | lesson_name | level_number | teacher_name         |
++------------+-----------+-------------+--------------+----------------------+
+| Petro      | Pravdoryb | Math        |           10 | Margaryta Ivanivna   |
+| Yuriy      | Skobylko  | Math        |           10 | Margaryta Ivanivna   |
+| Ivan       | Pidhaynuy | IT          |           11 | Yulia Liubomyrivna   |
+| Liubomyr   | Luzhnyi   | IT          |           11 | Yulia Liubomyrivna   |
+| Petro      | Pravdoryb | Biology     |           10 | Roksolana Stepanivna |
+| Yuriy      | Skobylko  | Biology     |           10 | Roksolana Stepanivna |
+| Liubomyr   | Luzhnyi   | Biology     |           11 | Roksolana Stepanivna |
+| Petro      | Pravdoryb | Biology     |           10 | Kateryna Yuriivna    |
+| Yuriy      | Skobylko  | Biology     |           10 | Kateryna Yuriivna    |
+| Liubomyr   | Luzhnyi   | Biology     |           11 | Kateryna Yuriivna    |
+| NULL       | NULL      | NULL        |         NULL | Stanislava Petrivna  |
++------------+-----------+-------------+--------------+----------------------+
+
