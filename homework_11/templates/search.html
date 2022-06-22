@@ -32,6 +32,7 @@
 </nav>
 <div class="container">
     <div class="row">
+        {% for user in users %}
             <div class="card" style="width: 19rem;">
               <div class="card-body">
                 <h5 class="card-title">{{ user["email"] }}</h5>
@@ -42,6 +43,7 @@
                 <a href="/" class="card-link">Update</a>
               </div>
             </div>
+        {% endfor %}
     </div>
 </div>
 

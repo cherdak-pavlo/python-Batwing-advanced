@@ -79,12 +79,15 @@ def search():
     work_area = request.args.get("work_area")
 
     users = get_users()
+    found_users = []
 
     for user in users:
         if email == user["email"] \
                 or first_name == user["first_name"] \
                 or last_name == user["last_name"] \
                 or work_area == user["work_area"]:
-            return render_template("search.html", user=user)
+            found_users.append(user)
+    if found_users:
+        return render_template("search.html", users=found_users)
     else:
-        return redirect("/")
+        return 'Not found'
