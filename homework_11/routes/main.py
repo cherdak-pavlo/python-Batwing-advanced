@@ -73,21 +73,14 @@ def delete(id):
 
 @app.route("/search")
 def search():
-    email = request.args.get("email")
-    first_name = request.args.get("first_name")
-    last_name = request.args.get("last_name")
-    work_area = request.args.get("work_area")
-
+    search_info = request.args.get('search_info')
     users = get_users()
     found_users = []
 
-    for user in users:
-        if email == user["email"] \
-                or first_name == user["first_name"] \
-                or last_name == user["last_name"] \
-                or work_area == user["work_area"]:
-            found_users.append(user)
-    if found_users:
-        return render_template("search.html", users=found_users)
-    else:
-        return 'Not found'
+    if search_info:
+        for user in users:
+            for value in user.values():
+                if search_info.lower() in str(value).lower():
+                    found_users.append(user)
+
+    return render_template("search.html", users=found_users)
