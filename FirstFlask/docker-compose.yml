@@ -1,0 +1,34 @@
+version: "3.8"
+
+services:
+  web:
+    container_name: "web"
+    build: .
+    command: python main.py
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+  db:
+    container_name: "postgresql"
+    image: postgres:13-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=killcrop123
+      - POSTGRES_PASSWORD=123qwe123
+      - POSTGRES_DB_NAME=postgres
+  pgweb:
+    container_name: "webpg"
+    image: sosedoff/pgweb
+    ports:
+      - "8081:8081"
+    environment:
+      - DATABASE_URL=postgresql://killcrop123:123qwe123@db:5432/postgres?sslmode=disable
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
