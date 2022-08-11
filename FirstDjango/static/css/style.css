@@ -1,0 +1,13 @@
+h1 {
+    color:grey;
+}
+
+.navbar-brand.logo {
+    color: red;
+    font-size: 28px;
+}
+
+.nav-item {
+    font-size: 22px;
+    font-weight: bold;
+}
