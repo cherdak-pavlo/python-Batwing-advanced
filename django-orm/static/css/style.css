@@ -1,0 +1,16 @@
+.navbar-brand.logo {
+    color: red;
+    font-size: 44px;
+}
+
+.nav-item {
+    font-size:22px;
+    font-weight: bold;
+}
+
+.print-categories {
+    color: grey;
+    display:inline;
+    float: right;
+    padding:0 3px;
+}
