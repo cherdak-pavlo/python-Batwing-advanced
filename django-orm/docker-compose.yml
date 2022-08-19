@@ -18,8 +18,10 @@ services:
 
   web:
     container_name: web
-    build: .
-    command: ./wait-for-it.sh db:3306 -- python manage.py runserver 0.0.0.0:8000
+    build:
+      dockerfile: ./docker/python/Dockerfile
+      context: ./
+    command: ./docker/python/wait-for-it.sh db:3306 -- python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/django_project
     ports:

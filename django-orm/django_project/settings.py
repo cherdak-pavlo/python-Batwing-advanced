@@ -85,7 +85,7 @@ DATABASES = {
         'PORT': 3306,
     }
 }
-
+AUTHENTICATION_BACKENDS = ("django.contrib.auth.backends.ModelBackend",)
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -123,7 +123,8 @@ STATICFILES_DIRS = [
     '/django_project/static/',
 ]
 
-STATIC_URL = 'static/'
+# STATIC_ROOT=os.path.join(BASE_DIR, 'static')
+STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
