@@ -6,4 +6,4 @@ register = template.Library()
 
 @register.inclusion_tag("menu_items_nav.html")
 def all_menu_items():
-    return {"all_menu_items_list": MenuItem.objects.all()}
+    return {"all_menu_items_list": MenuItem.objects.order_by("-id")}

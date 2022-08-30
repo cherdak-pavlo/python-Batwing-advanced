@@ -16,11 +16,9 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            {% load menu_items %}
-            {% all_menu_items %}
-            {% include 'menu_items_nav.html' %}
-          </div>
+        {% load menu_items %}
+        {% all_menu_items %}
+        {% include 'menu_items_nav.html' %}
           <div class="sign">
             {% if request.user.is_authenticated %}
              <h3 class="user">{{ request.user.first_name }} {{ request.user.last_name }}</h3>
