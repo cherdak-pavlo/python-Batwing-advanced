@@ -38,8 +38,9 @@ def add_category(request):
                 category = Category()
                 category.user = request.user
                 category.title = request.POST.get("title")
-                category.parent_id = int(request.POST.get("parent_category"))
-                category.slug = None
+                category.slug = request.POST.get("slug")
+                if request.POST.get("parent_category", False):
+                    category.parent_id = int(request.POST.get("parent_category"))
                 category.save()
                 return redirect("/")
         else:
