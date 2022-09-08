@@ -1,0 +1,18 @@
+[
+{
+    "model": "main.menuitem",
+    "pk": 1,
+    "fields": {
+        "name": "Add Product",
+        "url": "/products/add"
+    }
+},
+{
+    "model": "main.menuitem",
+    "pk": 2,
+    "fields": {
+        "name": "Add Category",
+        "url": "/products/category/add"
+    }
+}
+]

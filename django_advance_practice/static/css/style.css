@@ -1,0 +1,69 @@
+.navbar-brand.logo {
+    color: red;
+    font-size: 44px;
+}
+
+nav .sign {
+    float:right;
+    display: flex;
+    justify-content: space-between;
+    width: 17%;
+}
+
+nav .user {
+    color: white;
+}
+
+.nav-item {
+    font-size:22px;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    height: 140px;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    bottom: 0;
+}
+
+footer .container-blocks {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+}
+
+.product-title {
+    font-weight: bold;
+}
+
+.cart-remove {
+    color: white;
+    transition: 250ms ease-in-out;
+}
+
+.cart-remove:hover {
+    color: white;
+    font-size: 20px;
+}
+
+.cards-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.card {
+    margin-left: 10px;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+}

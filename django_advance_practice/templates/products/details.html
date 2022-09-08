@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h1 class="text-center">{{ product.title }}</h1>
+        <p>{{ product.description }}</p>
+        <a href="#">{{ product.user.first_name }} {{ product.user.last_name }}</a>
+        <a href="#">{{ product.approved_by.username }}</a>
+    </div>
+    {% if product.user_id == request.user.id %}
+        <a href="{% url 'update_product' id=product.id %}"  type="button" class="btn btn-primary">Edit</a>
+    {% endif %}
+    {% if product.id in product_session %}
+    <button type="button" class="btn btn-lg btn-secondary" disabled>Buy</button>
+    <p style="color: grey;" class="product-price">{{ product.price }}$</p>
+    {% else %}
+    <a href="{% url 'add_to_cart' product_id=product.id %}" type="button" class="btn btn-lg btn-success">Buy</a>
+    <p style="color: green;" class="product-price">{{ product.price }}$</p>
+    {% endif %}
+</div>
+{% endblock %}
+
