@@ -92,6 +92,42 @@
     }
 },
 {
+    "model": "products.order",
+    "pk": 5,
+    "fields": {
+        "user": 1,
+        "message": "sdfsdf",
+        "address": "sdfsdfsdf",
+        "name": "tesdfsd",
+        "email": "fsdfsdf@sdf.sdf",
+        "total_price": 378
+    }
+},
+{
+    "model": "products.order",
+    "pk": 6,
+    "fields": {
+        "user": 1,
+        "message": "dfgdfgdfg",
+        "address": "gdfgdfg",
+        "name": "dftdfg",
+        "email": "dfgf@dgdf",
+        "total_price": 378
+    }
+},
+{
+    "model": "products.order",
+    "pk": 7,
+    "fields": {
+        "user": 1,
+        "message": "test testt eTest testTest testTest testTest testTest test",
+        "address": "test address #1",
+        "name": "Test test",
+        "email": "test@te.st",
+        "total_price": 333
+    }
+},
+{
     "model": "products.orderitem",
     "pk": 1,
     "fields": {
@@ -105,6 +141,38 @@
     "fields": {
         "product": 3,
         "order": 4
+    }
+},
+{
+    "model": "products.orderitem",
+    "pk": 3,
+    "fields": {
+        "product": 4,
+        "order": 5
+    }
+},
+{
+    "model": "products.orderitem",
+    "pk": 4,
+    "fields": {
+        "product": 3,
+        "order": 5
+    }
+},
+{
+    "model": "products.orderitem",
+    "pk": 5,
+    "fields": {
+        "product": 4,
+        "order": 6
+    }
+},
+{
+    "model": "products.orderitem",
+    "pk": 6,
+    "fields": {
+        "product": 3,
+        "order": 6
     }
 }
 ]
